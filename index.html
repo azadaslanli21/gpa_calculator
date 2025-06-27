@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>GPA Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester GPA Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>GPA Calculator</h1>
-    
-    <div>
-        <input type="text" placeholder="Course Name (e.g., English 101)">
-        <input type="text" placeholder="Grade (e.g., A, B+)">
-        <input type="number" placeholder="Credits (e.g., 3)">
+    <div class="main-container">
+        <h1>Semester GPA Calculator 🎓</h1>
+
+        <div class="section-box">
+            <h2>Your Current Standing (Before These Semesters)</h2>
+            <div class="input-group">
+                <input type="number" id="current-gpa" placeholder="Current Total GPA (e.g., 3.5)">
+                <input type="number" id="current-credits" placeholder="Current Total Credits (e.g., 60)">
+            </div>
+        </div>
+
+        <div id="semesters-container">
+            </div>
+
+        <div class="global-controls">
+            <button id="add-semester-btn">Add New Semester</button>
+            <button id="calculate-gpa-btn">Calculate Final GPA</button>
+        </div>
+        
+        <div class="result-box">
+            <h2>Your New Cumulative GPA is: <span id="final-gpa">0.00</span></h2>
+        </div>
     </div>
 
-    <button id="calculateButton">Calculate GPA</button>
-
-    <h2>Your GPA is: <span id="gpaResult">0.00</span></h2>
-
-    <script src="script.js"></script>
+    <script src="calculator.js"></script>
 </body>
 </html>

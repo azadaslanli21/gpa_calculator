@@ -1,0 +1,179 @@
+/* General Styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 2rem;
+}
+
+h1, h2, h3 {
+    color: #1d3557;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Main Layout */
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-box {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Semester Block Styling */
+.semester-block {
+    border: 2px solid #a8dadc;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+}
+
+.semester-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.semester-header h3 {
+    margin: 0;
+}
+
+.semester-header input {
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    width: 50%;
+}
+
+/* Form within each semester */
+.add-course-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.retake-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #e9ecef;
+    border-radius: 6px;
+    padding: 0.5rem;
+}
+
+.add-course-form > button {
+    grid-column: 1 / -1; /* Full width */
+    margin-top: 0.5rem;
+}
+
+/* Global Controls at the bottom */
+.global-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.global-controls button {
+    flex-grow: 1;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+#add-semester-btn { background-color: #457b9d; }
+#add-semester-btn:hover { background-color: #1d3557; }
+#calculate-gpa-btn { background-color: #e63946; }
+#calculate-gpa-btn:hover { background-color: #d00000; }
+
+button {
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* ★ NEW: Colorful "Add Course" Button Style */
+.add-course-btn {
+    background-color: #2a9d8f; /* A nice teal color */
+}
+
+.add-course-btn:hover {
+    background-color: #264653; /* A darker shade for hover */
+}
+
+
+/* Course item styles */
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e9ecef;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+}
+.course-details { flex-grow: 1; }
+.course-name { font-weight: bold; }
+.course-tag {
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    color: white;
+    margin-left: 0.5rem;
+}
+.tag-retake { background-color: #1d3557; }
+.tag-excluded { background-color: #6c757d; }
+.remove-btn {
+    background-color: #6c757d;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+.remove-btn:hover { background-color: #343a40; }
+
+
+/* Result Box */
+.result-box {
+    padding: 1rem;
+    background-color: #a8dadc;
+    border-radius: 8px;
+    text-align: center;
+}
+.result-box h2 { border: none; margin: 0; color: #1d3557; }
+#final-gpa { font-weight: bold; }
